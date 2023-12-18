@@ -1,13 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>flex-recipe</title>
 </head>
 
 <body>
+
+  <!-- Filter -->
+  <input class="radio" type="radio" id="rulet" name="filter" value="">
+  <input class="radio" type="radio" id="tort" name="filter" value="">
+  <input class="radio" type="radio" id="tist" name="filter" value="">
+  <input class="radio" type="radio" id="pirig" name="filter" value="">
+  <input class="radio" type="radio" id="sirnik" name="filter" value="">
+  <input class="radio" checked type="radio" id="reset-filter" name="filter" value="">
+
+  <!-- Filter end -->
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header-h1">Cake <span class="accent-color-text">&</span> Cakes</h1>
+    </header>
+    <main class="main">
+      <div class="filter">
+        <div class="filter-container">
+          <div class="calorie-container">
+            <p class="calorie-container-header">Калорії у порції</p>
+            <input type="range" name="calorie" list="markers" id="calorie" value="1000" min="0" max="2000" step="100">
+            <datalist id="markers">
+              <option label="0" value="0"></option>
+              <option label="400" value="400"></option>
+              <option label="1000" value="1000"></option>
+              <option label="1400" value="1400"></option>
+              <option label="2000" value="2000"></option>
+            </datalist>
+            <p>Від <span>0</span> до <span>1000</span> кКал.</p>
+          </div>
+
+          <div class="filter-btn">
+            <label class="ruletB" for="rulet">Рулети</label>
+            <label class="tortB" for="tort">Торти</label>
+            <label class="tistB" for="tist">Тістечка</label>
+            <label class="pirigB" for="pirig">Пироги</label>
+            <label class="sirnikB" for="sirnik">Сирніки</label>
+            <label class="reset-filterB" for="reset-filter">Скинути</label>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="recipes">
+
+        <div class="card pirig">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://klopotenko.com/wp-content/uploads/2020/09/Ovsyanyi-pyrig_siteWebUkr.jpg?v=1599576680"
+                alt="">
+            </div>
+            <p><span class="clasif">Пиріг:</span><span class="recipe-name">Різдвянний</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">387</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card tort">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://rud.ua/uploads/under_recipe/Malinoviy_tort-morozivo_600x300_61cc2028604e5.jpg" alt="">
+            </div>
+            <p><span class="clasif">Торт:</span><span class="recipe-name">Малиновий</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">350</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card rulet">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://i.obozrevatel.com/food/recipemain/2020/1/18/screenshot111.png?size=636x424" alt="">
+            </div>
+            <p><span class="clasif">Рулет:</span><span class="recipe-name">Смакота</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">237</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card sirnik">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://klopotenko.com/wp-content/uploads/2020/06/syrnyky_sitewebukr-img-1000x600.jpg?v=1682503872"
+                alt="">
+            </div>
+            <p><span class="clasif">Сирніки:</span><span class="recipe-name">Авторскі</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">277</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card pirig">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://klopotenko.com/wp-content/uploads/2023/07/kysh-z-kurkoyu_sitewebukr-img-1000x600.jpg?v=1690554619"
+                alt="">
+            </div>
+            <p><span class="clasif">Пиріг:</span><span class="recipe-name">Курячий</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">472</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card pirig">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://klopotenko.com/wp-content/uploads/2023/10/klasychnyy-harbuzovyy-pyrih-img-1000x600.jpg?v=1698145117"
+                alt="">
+            </div>
+            <p><span class="clasif">Пиріг:</span><span class="recipe-name">Гарбузовий</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">377</span>кКал</p>
+          </div>
+        </div>
+
+
+        <div class="card tist">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://images.unian.net/photos/2021_10/1633444924-8840.jpg?0.9751247617084362" alt="">
+            </div>
+            <p><span class="clasif">Тістечка:</span><span class="recipe-name">Заварні</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">677</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card rulet">
+          <div class="imgAndHeader">
+            <div class="img-block"><img src="https://cdn.meta.ua/meta_news/ff/01001uku-ff3e_1280x720.jpeg" alt="">
+            </div>
+            <p><span class="clasif">Рулет:</span><span class="recipe-name">Зелений</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">217</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card sirnik">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://images.unian.net/photos/2021_02/1613373803-2196.jpg?0.5117241867597122" alt="">
+            </div>
+            <p><span class="clasif">Сирніки:</span><span class="recipe-name">Медові</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">647</span>кКал</p>
+          </div>
+        </div>
+
+        <div class="card pirig">
+          <div class="imgAndHeader">
+            <div class="img-block"><img
+                src="https://klopotenko.com/wp-content/uploads/2023/11/garbuzoviy-pyrig-z-mankoyu-img-1000x600.jpg?v=1699010392"
+                alt="">
+            </div>
+            <p><span class="clasif">Пиріг:</span><span class="recipe-name">Манник</span></p>
+          </div>
+          <div class="cake-calories-container">
+            <p>Калорій у порції <span class="cake-calories">422</span>кКал</p>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </main>
+    <footer class="footer">
+      <div class="contact">
+        <div class="contact-block1">
+          <p>Контакти:</p>
+          <p><a href="mailto:tortik@smakota.ua">tortik@smakota.ua</a></p>
+        </div>
+        <div class="contact-block2">
+          <p>© 2023 Smakota</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
 
 </body>
 

@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Preahvihear&display=swap");
+
+:root {
+  --main-ff: "Montserrat", sans-serif;
+  --accent-text-ff: "Preahvihear", sans-serif;
+  --accent: #e23737;
+  --link-color: #1799f0;
+  --card-bg: #f0f0f0;
+  --btn-bg: #d1caca;
+  --main-bg: #ffffff;
+}
+
+* {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg);
+  width: 100%;
+  font-family: var(--main-ff);
+}
+
+.radio {
+  display: none;
+}
+
+.wrapper {
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+.header-h1 {
+  font-size: 2em;
+}
+
+.accent-color-text {
+  font-family: var(--accent-text-ff);
+  color: var(--accent);
+}
+
+.main {
+  min-height: 80dvh;
+  gap: 20px;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+
+.recipes {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  width: 80%;
+}
+
+.recipe-name {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  border-radius: 25px;
+  padding: 20px;
+  background: var(--card-bg);
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 5px 29px 2px var(--accent);
+  -moz-box-shadow: 0px 5px 29px 2px var(--accent);
+  box-shadow: 0px 5px 29px 2px var(--accent);
+}
+
+.img-block {
+  height: 150px;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.imgAndHeader {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-flow: row;
+}
+
+.imgAndHeader img {
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.imgAndHeader p {
+  gap: 5px;
+  display: flex;
+  flex-flow: column;
+}
+
+.filter {
+  border-radius: 25px;
+  padding: 20px 0;
+  background: var(--card-bg);
+  text-align: center;
+  width: 20%;
+}
+
+.filter-btn {
+  padding: 8px;
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.filter-container {
+  position: sticky;
+  top: 40px;
+}
+
+.filter-btn label {
+  /* width: auto; */
+  display: block;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--btn-bg);
+}
+
+.filter-btn label:hover {
+  filter: grayscale(50%);
+  background: var(--accent);
+}
+
+.calorie-container {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+input[type="range"] {
+  width: 70%;
+  margin: 0;
+}
+
+datalist {
+  font-size: small;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+option {
+  padding: 0;
+}
+
+.contact {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--accent);
+}
+
+.contact-block1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+#rulet:checked ~ .wrapper .card:not(.rulet),
+#tort:checked ~ .wrapper .card:not(.tort),
+#tist:checked ~ .wrapper .card:not(.tist),
+#pirig:checked ~ .wrapper .card:not(.pirig),
+#sirnik:checked ~ .wrapper .card:not(.sirnik) {
+  filter: blur(3px) grayscale(100%);
+}
+
+#rulet:checked ~ .wrapper .card:not(.rulet):hover,
+#tort:checked ~ .wrapper .card:not(.tort):hover,
+#tist:checked ~ .wrapper .card:not(.tist):hover,
+#pirig:checked ~ .wrapper .card:not(.pirig):hover,
+#sirnik:checked ~ .wrapper .card:not(.sirnik):hover {
+  filter: blur(0) grayscale(90%);
+}
+
+#rulet:checked ~ .wrapper .ruletB,
+#tort:checked ~ .wrapper .tortB,
+#tist:checked ~ .wrapper .tistB,
+#pirig:checked ~ .wrapper .pirigB,
+#sirnik:checked ~ .wrapper .sirnikB {
+  background: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  .contact-block1 {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main {
+    gap: 20px;
+    flex-flow: column;
+  }
+
+  .recipes {
+    padding: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .filter {
+    border-radius: 25px;
+    padding: 0;
+    background: inherit;
+    text-align: center;
+    width: 100%;
+  }
+
+  .imgAndHeader {
+    flex-flow: column;
+  }
+
+  .img-block {
+    max-height: 300px;
+    max-width: 100%;
+  }
+
+  .imgAndHeader p {
+    flex-flow: row;
+  }
+
+  .calorie-container {
+    display: none;
+  }
+
+  .cake-calories-container {
+    display: none;
+  }
+
+  .filter-btn {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    height: auto;
+  }
+}
+
+@media (max-width: 730px) {
+  .contact {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .recipes {
+    gap: 20px;
+  }
+
+  .recipes * {
+    padding: 0;
+  }
+
+  .img-block {
+    height: 300px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .filter-btn {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recipes {
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .imgAndHeader p {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .filter-btn label {
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .img-block {
+    height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .header-h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --main-ff: "Montserrat", sans-serif;
+    --accent-text-ff: "Preahvihear", sans-serif;
+    --accent: #e23737;
+    --link-color: #970000;
+    --card-bg: #521515;
+    --btn-bg: #1b1313;
+    --main-bg: #1d1d1d;
+  }
+
+  body {
+    color: #ffffff;
+  }
+}
