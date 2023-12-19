@@ -332,8 +332,6 @@ option {
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
-    --main-ff: "Montserrat", sans-serif;
-    --accent-text-ff: "Preahvihear", sans-serif;
     --accent: #e23737;
     --link-color: #970000;
     --card-bg: #521515;
